@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact | Reading Specialist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <!-- Updated form action to point to contact.php -->
+      <form id="contact-form" action="contact.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="form-message"><?php if(isset($_GET['status'])) echo htmlspecialchars($_GET['status']); ?></p>
+
+      <!-- Additional contact methods section -->
+      <section class="contact-methods">
+        <h2>Or, contact us directly:</h2>
+        <p>If you prefer, you can reach us by email or phone:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:specialist@example.com">exhilaread@gmail.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+1234567890">+1 (929) 216-0779</a></li>
+        </ul>
+        <p>You can either reach out to us through these methods or by filling out the form above. We look forward to hearing from you!</p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Exhilaread. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
