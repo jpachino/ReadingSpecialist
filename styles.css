@@ -1,115 +1,283 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  height: 100%; /* Ensure body covers the full height */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.hero {
+  background-image: url('images/exhilaread-07.jpg');
+  background-size: contain; /* Ensures the image is fully visible and centered */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Sets the hero section to take up the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers the content inside the hero section */
+  color: white; /* Ensures the text stands out against the background */
+  text-align: center;
+  padding: 0 20px; /* Adds padding to the sides */
+}
+
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.intro {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.intro h2 {
+  font-size: 28px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.services ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.services li {
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 5px 0;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+.specialist-profile {
+  display: flex; /* Flex container to align the image and text horizontally */
+  align-items: center; /* Vertically center the image and text */
+  gap: 20px; /* Adds space between the image and the text */
+  flex-direction: row-reverse; /* Reverses the order of the elements, putting the image on the right */
+}
+
+.specialist-photo {
+  width: 300px; /* Increase the size of the image to be twice as big */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 8px; /* Optional: adds rounded corners to the image */
+}
+
+.specialist-bio {
+  flex: 1; /* Ensures the text takes up the remaining space */
+}
+
+.specialist-bio p {
+  margin: 0 0 10px; /* Adds margin between paragraphs for readability */
+}
+.contact-methods {
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.contact-methods h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-methods ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-methods ul li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-methods a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.contact-methods a:hover {
+  text-decoration: underline;
+}
+
+/* Testimonials section styling */
+.testimonials {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonials h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.testimonial {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.testimonial strong {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+/* Services section styling */
+.services {
+  background-color: #fff; /* White background for the section */
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Centers the title */
+}
+
+.services ul {
+  list-style: none; /* Removes default bullet points */
+  padding-left: 0; /* Removes any padding from the left */
+}
+
+.services li {
+  position: relative; /* Allows us to add a custom bullet style */
+  padding-left: 30px; /* Creates space for the custom bullet */
+  margin-bottom: 15px; /* Adds spacing between list items */
+  font-size: 18px;
+  color: #555;
+}
+
+/* Custom bullet point styling */
+.services li:before {
+  content: "•"; /* Adds a bullet character */
+  position: absolute;
+  left: 10px; /* Moves the bullet to the left */
+  top: 0; /* Ensures the bullet is aligned with the text */
+  font-size: 30px; /* Increases the size of the bullet */
+  color: #1a73e8; /* Sets the color of the bullet to a blue shade */
+}
+
+.services li:hover {
+  background-color: #f0f8ff; /* Light background color on hover for better interactivity */
+  padding-left: 35px; /* Increases padding when hovered for emphasis */
+  transition: background-color 0.3s ease, padding-left 0.3s ease; /* Smooth hover effect */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .services h1 {
+    font-size: 28px;
   }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333333;
+
+  .services li {
+    font-size: 16px;
   }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-  }
-  
+
   header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
   }
-  
+
   header nav ul li {
-    margin: 0 15px;
+    margin: 10px 0;
   }
-  
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  header nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .hero {
-    background-image: url('images/exhilaread-07.jpg'); /* Ensure this image exists */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating the image */
-    height: 100vh; /* Full viewport height */
-  }
-  
-  .intro {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .intro a {
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-    background-color: #f0f0f0;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-  
-  .intro a:hover {
-    background-color: #ddd;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  footer p {
-    font-size: 14px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .hero {
-      background-size: cover; /* Ensures the background image still covers the container */
-    }
-  
-    .intro a {
-      font-size: 16px;
-      padding: 8px 15px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hero {
-      background-size: cover; /* Still maintain full coverage of the background image */
-      height: 60vh; /* Reduces height on smaller screens */
-    }
-  
-    .intro a {
-      font-size: 14px;
-      padding: 6px 12px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero {
-      background-size: cover;
-      height: 50vh; /* Further reduced height on very small screens */
-    }
-  
-    .intro a {
-      font-size: 12px;
-      padding: 5px 10px;
-    }
-  }
-  
+}
